@@ -1,10 +1,19 @@
+/* =========================================
+   JAVA JAM - MAIN STYLESHEET
+   ========================================= */
+
 :root {
     --primary: #2F5D9F;
     --secondary: #6FA8DC;
-    --background: #F8FAFC;
     --dark: #1E293B;
-    --white: #FFFFFF;
+    --light: #FFFFFF;
+    --background: #F8FAFC;
+    --border: #E5E7EB;
 }
+
+/* =========================================
+   RESET
+   ========================================= */
 
 * {
     margin: 0;
@@ -20,30 +29,32 @@ body {
     font-family: 'Poppins', sans-serif;
     background: var(--background);
     color: var(--dark);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* NAVIGATION */
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 8%;
+    padding: 18px 8%;
 
     background: white;
 
     position: sticky;
     top: 0;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-
     z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: var(--primary);
 }
@@ -55,10 +66,9 @@ nav {
 
 .nav-links a,
 .nav-links a:visited {
-    text-decoration: none;
     color: var(--dark);
+    text-decoration: none;
     font-weight: 500;
-
     transition: 0.3s;
 }
 
@@ -66,14 +76,33 @@ nav {
     color: var(--primary);
 }
 
-/* HERO SECTION */
+.enroll-nav,
+.enroll-nav:visited {
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 22px;
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.enroll-nav:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
 
 .hero {
-    min-height: 85vh;
+    min-height: 80vh;
 
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
@@ -96,26 +125,24 @@ nav {
 }
 
 .hero p {
-    max-width: 700px;
     font-size: 1.2rem;
+    max-width: 750px;
     margin-bottom: 35px;
 }
 
-/* BUTTON */
-
-.hero-btn {
+.hero-btn,
+.hero-btn:visited {
     display: inline-block;
 
     background: white;
     color: var(--primary);
 
-    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 14px 28px;
 
     border-radius: 10px;
-
-    text-decoration: none;
-
-    font-weight: 600;
 
     transition: 0.3s;
 }
@@ -124,99 +151,267 @@ nav {
     transform: translateY(-3px);
 }
 
-/* GENERAL SECTIONS */
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
 
 section {
     padding: 90px 10%;
 }
 
-section h2 {
+.section-title {
     text-align: center;
 
-    margin-bottom: 35px;
+    font-size: 2.5rem;
 
     color: var(--primary);
 
-    font-size: 2.3rem;
+    margin-bottom: 25px;
 }
 
-section p {
-    max-width: 850px;
+.section-text {
+    max-width: 900px;
+
     margin: auto;
+
     text-align: center;
 }
 
-/* STATS */
+/* =========================================
+   STATISTICS
+   ========================================= */
 
 .stats {
     display: flex;
-
     justify-content: center;
-
     gap: 30px;
 
     flex-wrap: wrap;
 
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-/* PROGRAMS */
-
-.program-container {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    flex-wrap: wrap;
-
-    margin-top: 40px;
-}
-
-/* CARDS */
-
-.card {
+.stat-card {
     background: white;
 
     width: 280px;
 
-    padding: 30px;
+    padding: 35px;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 
     transition: 0.3s;
 }
 
-.card:hover {
+.stat-card:hover {
     transform: translateY(-8px);
 }
 
-.card h3 {
+.stat-card h3 {
+    font-size: 2.3rem;
+    color: var(--primary);
+}
+
+.stat-card p {
+    margin-top: 10px;
+}
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-container p {
+    margin-bottom: 25px;
+}
+
+.teacher-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+}
+
+.teacher-card {
+    background: white;
+
+    width: 280px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
     text-align: center;
 
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.placeholder-photo {
+    width: 100%;
+    height: 220px;
+
+    background: #D1D5DB;
+
+    border-radius: 12px;
+
     margin-bottom: 15px;
+}
+
+/* =========================================
+   COURSES
+   ========================================= */
+
+.course-card {
+    max-width: 1000px;
+
+    margin: 25px auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.course-card summary {
+    cursor: pointer;
+
+    font-size: 1.4rem;
+    font-weight: 600;
 
     color: var(--primary);
 }
 
-.card p {
-    text-align: center;
+.course-content {
+    margin-top: 25px;
 }
 
-/* CONTACT */
+.course-content h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
 
-#contact {
-    text-align: center;
+    color: var(--primary);
 }
 
-#contact p {
-    margin-bottom: 30px;
+.course-content ul {
+    margin-left: 20px;
 }
 
-/* FOOTER */
+.course-content li {
+    margin-bottom: 10px;
+}
+
+.course-controls {
+    margin-top: 25px;
+
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.course-controls select,
+.course-controls input {
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    font-family: inherit;
+}
+
+.enroll-btn,
+.enroll-btn:visited {
+    background: var(--primary);
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.enroll-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-form {
+    max-width: 700px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 
 footer {
     background: var(--dark);
@@ -225,16 +420,14 @@ footer {
 
     text-align: center;
 
-    padding: 25px;
+    padding: 30px;
 }
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+   ========================================= */
 
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 2.7rem;
-    }
+@media (max-width: 900px) {
 
     nav {
         flex-direction: column;
@@ -242,7 +435,20 @@ footer {
     }
 
     .nav-links {
-        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .course-controls {
+        flex-direction: column;
+    }
+
+    .course-controls select,
+    .course-controls input {
+        width: 100%;
+    }
 }
